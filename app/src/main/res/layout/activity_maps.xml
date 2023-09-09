@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:map="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <Button
+        android:id="@+id/delete"
+        android:layout_width="91dp"
+        android:layout_height="50dp"
+        android:layout_marginEnd="72dp"
+        android:onClick="delete"
+        android:text="Delete"
+        map:layout_constraintBottom_toBottomOf="parent"
+        map:layout_constraintEnd_toEndOf="parent"
+        map:layout_constraintTop_toBottomOf="@+id/nameText" />
+
+    <fragment
+
+        android:id="@+id/map"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="413dp"
+        android:layout_height="693dp"
+        map:layout_constraintEnd_toEndOf="parent"
+        map:layout_constraintStart_toStartOf="parent"
+        map:layout_constraintTop_toTopOf="parent"
+        tools:context=".view.MapsActivity" />
+
+    <EditText
+        android:id="@+id/nameText"
+        android:layout_width="388dp"
+        android:layout_height="56dp"
+        android:ems="10"
+        android:hint="enter name"
+        android:inputType="text"
+        map:layout_constraintEnd_toEndOf="parent"
+        map:layout_constraintStart_toStartOf="parent"
+        map:layout_constraintTop_toBottomOf="@+id/map" />
+
+    <Button
+        android:id="@+id/saveButton"
+        android:layout_width="91dp"
+        android:layout_height="50dp"
+        android:onClick="save"
+        android:text="Save"
+        map:layout_constraintBottom_toBottomOf="parent"
+        map:layout_constraintEnd_toStartOf="@+id/delete"
+        map:layout_constraintStart_toStartOf="parent"
+        map:layout_constraintTop_toBottomOf="@+id/nameText" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
